@@ -183,6 +183,10 @@ main {
     box-shadow: var(--shadow);
 }
 
+.hero .eyebrow {
+    margin-bottom: 0.5rem;
+}
+
 .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -192,6 +196,20 @@ main {
     font-size: 0.74rem;
     font-weight: 700;
     color: var(--accent);
+}
+
+.hero h2 {
+    margin: 0 0 0.4rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.hero blockquote {
+    margin: 0.75rem auto 1.25rem;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.98rem;
 }
 
 .eyebrow::before,
@@ -207,8 +225,8 @@ main {
     font-family: "Fraunces", serif;
     font-size: clamp(2.2rem, 6.5vw, 4.6rem);
     line-height: 1.04;
-    max-width: 14ch;
-    margin: 0.9rem auto 1rem;
+    max-width: 20ch;
+    margin: 0 auto 0;
 }
 
 .hero > p {
@@ -222,7 +240,7 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.9rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .primary-button,
@@ -281,13 +299,13 @@ main {
     color: var(--accent);
 }
 
-.official-event-link {
-    margin-top: 1.4rem;
+.hero .official-event-link {
+    margin-top: 1.5rem;
     align-self: center;
 }
 
 .hero-stats {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.9rem;
