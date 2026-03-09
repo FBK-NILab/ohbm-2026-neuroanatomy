@@ -488,6 +488,7 @@ main {
     text-align: center;
 }
 
+/* Thumbnails and photos: use object-fit so non-square source images are cropped, not distorted. For best results, provide square source images with the face centered. */
 .people-thumb-photo {
     width: 82px;
     height: 82px;
@@ -500,6 +501,8 @@ main {
     font-size: 0.62rem;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    object-fit: cover;
+    object-position: center;
 }
 
 .people-thumb h4 {
@@ -563,6 +566,7 @@ main {
     height: 52px;
     border-radius: 999px;
     object-fit: cover;
+    object-position: center;
     border: 1px solid rgba(26, 39, 61, 0.12);
     box-shadow: 0 4px 12px rgba(16, 22, 34, 0.08);
 }
@@ -606,6 +610,8 @@ main {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
+    object-fit: cover;
+    object-position: center;
 }
 
 .people-card-photo {
