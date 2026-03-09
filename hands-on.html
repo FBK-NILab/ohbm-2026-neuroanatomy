@@ -19,15 +19,15 @@
             <nav id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="program.html">Program</a>
-                <a href="speakers.html">Talks</a>
+                <a href="talks.html">Talks</a>
                 <a href="hands-on.html">Hands-on</a>
                 <a href="resources.html">Resources</a>
-                <a href="organizers.html">Organizers</a>
+                <a href="people.html">People</a>
             </nav>
             <button class="menu-button" id="menu-button" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
         </header>
 
-        <main>
+        <main class="hands-on-layout">
             <section class="section section-reveal">
                 <h2 class="title-with-icon"><span class="title-icon" aria-hidden="true">&#128295;</span>Hands-on</h2>
                 <p class="section-intro">
@@ -36,28 +36,107 @@
                 </p>
             </section>
 
-            <section id="hands-on" class="section section-reveal">
-                <h2 class="title-with-icon"><span class="title-icon" aria-hidden="true">&#128203;</span>Learning objectives</h2>
-                <p>By the end of this session, participants will be able to:</p>
-                <div class="card-grid">
-                    <article class="card">
-                        <h3 class="title-with-icon"><span class="title-icon" aria-hidden="true">&#129514;</span>Identifying</h3>
-                        <p>The major macroanatomical landmarks, cortical and subcortical structures, white- matter tracts, and large-scale brain networks relevant to human neuroanatomy.</p>
-                    </article>
-                    <article class="card">
-                        <h3 class="title-with-icon"><span class="title-icon" aria-hidden="true">&#129504;</span>Describing</h3>
-                        <p>How multimodal approaches (structural MRI, diffusion imaging, functional MRI, neurochemical maps) contribute complementary information to understanding brain organisation.</p>
-                    </article>
-                    <article class="card">
-                        <h3 class="title-with-icon"><span class="title-icon" aria-hidden="true">&#129513;</span>Explaining</h3>
-                        <p>The relevance of neuroanatomical knowledge for interpreting non-invasive neuroimaging data and for recognising patterns associated with neurological and neuropsychological disorders..</p>
-                    </article>
+            <article class="card talk-card">
+                <p class="talk-number">Talk #7 • 🔧 Hands-On</p>
+                <div class="talk-speaker">
+                    <img class="organizer-photo" aria-hidden="true" src="img/Stephanie.png" alt="Photo of Stephanie Forkel" />
+
+                    <div>
+                        <h3>Stephanie Forkel</h3>
+                        <p class="talk-meta">Donders Institute for Brain, Cognition and Behaviour, Radboud Universiteit, Netherlands</p>
+                    </div>
                 </div>
-            </section>
+                <h2 class="talk-title">Introduction to connectional neuroanatomy and tools for its study</h2>
+                <a href="#" class="slides-link">Placeholder link for slides</a>
+                <span class="talk-description-label">Description</span>
+                <p class="talk-description">
+                    This session introduces attendees to the anatomy of major white matter fiber pathways of the human brain and to practical tools for their study. The tutor will review the canonical definition of representative white matter bundles through the description of their terminal regions, geometrical features and anatomical waypoints, providing a structured framework for recognizing these connections in individual datasets.<br /><br />
+                    The session will also introduce <b><a href="http://tractome.org">Tractome</a></b
+                    >, a tool for tractography bundle segmentation that supports both ROI- and streamline-based approaches. Participants will then engage in a guided exercise in which they are challenged to identify a target white matter bundle from an individual whole-brain tractogram. Through hands-on use of ROI-based and streamline-based segmentation approaches implemented in <b><a href="http://tractome.org">Tractome</a></b
+                    >, attendees will become familiar with the core functionalities of the tool and the practical considerations involved in isolating fiber bundles from whole-brain tractography data.<br /><br />
+                    To encourage self evaluation, participants will load a reference probability map of the same bundle derived from population-based reconstructions. By comparing their segmentation with this volumetric reference model, they will assess the anatomical reliability of their segmentation while considering expected inter-individual variability.<br /><br />
+                    Through this activity, participants will gain an understanding of: (i) the anatomical definitions and distinguishing features of major white matter fiber pathways (ii) the principles and practical implementation of ROI- and streamline- based approaches for tractography bundle segmentation (iii) how to evaluate consistency of the target bundle with canonical anatomy while accounting for subject-specific variability, (iv) common biases in bundle identification.
+                </p>
+            </article>
+
+            <article class="card talk-card">
+                <p class="talk-number">Talk #8 • 🔧 Hands-On</p>
+                <div class="talk-speaker">
+                    <div class="organizer-photo" aria-hidden="true">Picture Placeholder</div>
+                    <div>
+                        <h3>Alberto Cacciola</h3>
+                        <p class="talk-meta">Department of Biomedical Sciences, Humanitas University, Milan, Italy IRCCS Humanitas Research Hospital, Milan, Italy</p>
+                    </div>
+                </div>
+                <h2 class="talk-title">Disentangling neighbouring bundles</h2>
+                <a href="#" class="slides-link">Placeholder link for slides</a>
+                <span class="talk-description-label">Description</span>
+                <p class="talk-description">
+                    This educational task focuses on the anatomical discrimination of white matter bundles that share similar trajectories and spatial relationships. The objectives are twofold: (i) to appreciate the three-dimensional organization, proximity and partially overlapping courses of neighbouring bundles, and (ii) to understand how the differences in cortical terminations and subcortical waypoints enable their differentiation.<br /><br />
+                    Participants will be asked to identify bundles that follow broadly similar trajectories — such as the arcuate fasciculus and its two indirect segments (anterior and posterior), or the inferior fronto- occipital fasciculus, uncinate fasciculus and inferior longitudinal fasciculus. Using waypoints ROI-based segmentation in <b><a href="http://tractome.org">Tractome</a></b
+                    >, attendees will begin with shared inclusion ROIs to reveal the common course of these pathways. They will then progressively introduce exclusion ROIs to disentangle neighbouring bundles and reveal their distinct spatial features.<br /><br />
+                    Through this stepwise approach, participants will learn to recognize how bundles that appear similar in their overall trajectory can be distinguished by their cortical termination patterns and subcortical waypoints. This activity not only reinforces the understanding of the geometric complexity of the white matter architecture but also provides practical skills for tractography bundle segmentation from whole-brain tractograms.
+                </p>
+            </article>
+
+            <article class="card talk-card">
+                <p class="talk-number">Talk #9 • 🔧 Hands-On</p>
+                <div class="talk-speaker">
+                    <div class="organizer-photo" aria-hidden="true">Picture Placeholder</div>
+                    <div>
+                        <h3>Laura Vavassori</h3>
+                        <p class="talk-meta">McConnell Brain Imaging Centre, Montreal Neurological Institute and Hospital, McGill University, Canada</p>
+                    </div>
+                </div>
+                <h2 class="talk-title">Tractography-dissection bundle comparisons</h2>
+                <a href="#" class="slides-link">Placeholder link for slides</a>
+                <span class="talk-description-label">Description</span>
+                <p class="talk-description">
+                    This task is designed to bridge virtual tractography with real anatomical dissection, enabling participants to directly relate in vivo tractography-derived reconstructions of white matter connections to real anatomical evidence obtained through ex vivo dissection. The activity supports a virtual session of ex vivo white matter dissection, where participants develop the ability to maintain conceptual and spatial correspondence between tractography-derived bundles and actual white matter anatomy.<br /><br />
+                    Participants will examine the layered 3D digital dissection models, navigating through successive layers of dissection to identify the anatomical plane where the bundle of interest becomes visible. They will then project their tractography bundle reconstruction from the previous task onto the surface of the dissection models, aligning the virtual tractography bundle with the relevant anatomical evidence revealed through dissection.<br /><br />
+                    This comparison encourages critical evaluation of how well the tractography representation reflects the course, geometry, and spatial relationships of the fiber pathway as described by direct anatomical evidence. As a bridge between digital neuroimaging and traditional neuroanatomical approaches, this task fosters an integrative understanding of white matter anatomy. By juxtaposing indirect reconstruction with dissection evidence, participants gain a deeper appreciation of the strengths and limitations of tractography and develop a more grounded interpretation of white matter organization.
+                </p>
+            </article>
+
+            <article class="card talk-card">
+                <p class="talk-number">Talk #10 • 🔧 Hands-On</p>
+                <div class="talk-speaker">
+                    <div class="organizer-photo" aria-hidden="true">Picture Placeholder</div>
+                    <div>
+                        <h3>Luca Zigiotto</h3>
+                        <p class="talk-meta">Azienda Provinciale per i Servizi Sanitari di Trento (APSS), Trento, Italy</p>
+                    </div>
+                </div>
+                <h2 class="talk-title">Structure-function associations</h2>
+                <a href="#" class="slides-link">Placeholder link for slides</a>
+                <span class="talk-description-label">Description</span>
+                <p class="talk-description">
+                    The fourth educational task focuses on understanding the functional implications of white matter connections and disconnections, stressing how structural pathways support cognitive functions and how disruptions to these pathways can lead to predictable cognitive deficits. Participants will be introduced to the principles underlying structure–function relationships in the brain, including the network nature of this phenomenon.<br /><br />
+                    In this task, attendees load a patient-derived tumor volume into <b><a href="http://tractome.org">Tractome</a></b> and identify the white matter pathways intersected by the lesion using an individual whole-brain tractogram. By examining the terminal regions of the affected tracts and mapping their intersections onto cortical parcels of a functional atlas derived from intraoperative direct electrical stimulation, participants will infer which cognitive domains or behavioral functions may be impacted by the lesion.<br /><br />
+                    Through this activity, attendees gain experience in integrating anatomical, tractographic, and functional evidence to formulate anatomically grounded predictions about behavioral outcomes. The task highlights the translational relevance of connectional anatomy and demonstrates how knowledge of white matter organization can support the interpretation of functional consequences of brain lesions.
+                </p>
+            </article>
         </main>
 
-        <footer>
-            <p>&copy; 2026 Lvcaa</p>
+        <footer class="site-footer">
+            <div class="footer-grid">
+                <section class="footer-block">
+                    <h3>Contact</h3>
+                    <p>Hiromasa Takemura</p>
+                    <p>organizer.email@example.com</p>
+                    <p>Organizer Affiliation</p>
+                </section>
+                <section class="footer-block">
+                    <h3>Official Event</h3>
+                    <p><a href="https://humanbrainmapping.org/OHBM2026/" target="_blank" rel="noopener noreferrer">OHBM 2026 official event page</a></p>
+                </section>
+                <section class="footer-block">
+                    <h3>Date and Place</h3>
+                    <p>June 14, 2026</p>
+                    <p>Bordeaux, France</p>
+                </section>
+            </div>
+            <p class="footer-meta">&copy; 2026 OHBM 2026 Educational Course</p>
         </footer>
 
         <script src="app.js"></script>
