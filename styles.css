@@ -223,7 +223,8 @@ main {
 
 .hero h1 {
     font-family: "Fraunces", serif;
-    font-size: clamp(2.2rem, 6.5vw, 4.6rem);
+    /* font-size: clamp(2.2rem, 6.5vw, 4.6rem); */
+    font-size: clamp(1.6rem, 4.5vw, 3.2rem);
     line-height: 1.04;
     max-width: 20ch;
     margin: 0 auto 0;
