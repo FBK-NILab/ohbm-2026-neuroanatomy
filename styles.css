@@ -436,7 +436,7 @@ main {
 }
 
 .people-preview-intro {
-    max-width: 30ch;
+    max-width: 42ch;
     color: var(--muted);
     text-align: right;
 }
@@ -448,6 +448,9 @@ main {
 }
 
 .people-preview-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid var(--line);
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.6);
@@ -461,6 +464,7 @@ main {
     align-items: center;
     gap: 1rem;
     margin-bottom: 0.9rem;
+    width: 100%;
 }
 
 .people-preview-topline h3 {
@@ -475,8 +479,24 @@ main {
 
 .people-thumb-list {
     display: grid;
+    flex: 1;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1.1rem 0.9rem;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Organizers: 4 people in one row, full width, centered vertically in the card */
+.people-preview-card--organizers .people-thumb-list {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.1rem;
+    align-content: center;
+    justify-items: center;
+}
+
+.people-preview-card--speakers .people-thumb-list {
+    grid-template-rows: repeat(2, auto);
 }
 
 .people-thumb {
@@ -484,16 +504,17 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 0.6rem;
-    padding: 0.25rem 0.4rem;
+    padding: 0.25rem 0;
     text-align: center;
+    width: 100%;
 }
 
 /* Thumbnails and photos: use object-fit so non-square source images are cropped, not distorted. For best results, provide square source images with the face centered. */
 .people-thumb-photo {
-    width: 125px;
-    height: 125px;
-    border-radius: 20px;
-    border: 1px dashed rgba(26, 39, 61, 0.28);
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    overflow: hidden;
     background: linear-gradient(140deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.08)), rgba(255, 255, 255, 0.8);
     display: grid;
     place-items: center;
@@ -505,18 +526,22 @@ main {
     object-position: center;
 }
 
+img.people-thumb-photo {
+    display: block;
+}
+
 .people-thumb h4 {
-    font-size: 1rem;
-    line-height: 1.25;
+    font-size: 0.96rem;
+    line-height: 1.2;
     margin-bottom: 0;
     max-width: 8em;
 }
 
 .people-thumb p {
     color: var(--muted);
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     line-height: 1.35;
-    max-width: 14ch;
+    max-width: 15ch;
 }
 
 .people-list {
@@ -965,6 +990,8 @@ main {
 .program-table-wrap {
     margin-top: 1.2rem;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
     border: 1px solid var(--line);
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.72);
@@ -1133,6 +1160,11 @@ main {
 }
 
 @media (max-width: 900px) {
+    .navbar,
+    main {
+        width: min(1100px, calc(100% - 2rem));
+    }
+
     .hero-stats {
         grid-template-columns: 1fr;
     }
@@ -1208,7 +1240,35 @@ main {
     }
 
     .people-thumb-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .people-preview-card--organizers .people-thumb-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .people-preview-card--speakers .people-thumb-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .talk-speaker {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .talk-speaker .organizer-photo {
+        max-width: 120px;
+        margin: 0 auto;
+    }
+
+    .allocation-bar span {
+        font-size: 0.78rem;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .schedule-flow {
+        grid-template-columns: 1fr;
     }
 
     .footer-grid {
@@ -1230,6 +1290,28 @@ main {
 
     .hero h1 {
         font-size: clamp(1.9rem, 12vw, 3rem);
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .people-preview-header {
+        display: grid;
+        align-items: start;
+    }
+
+    .people-preview-intro {
+        max-width: none;
+        text-align: left;
     }
 
     .people-jump-nav {
@@ -1284,5 +1366,107 @@ main {
 
     .people-thumb-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .people-preview-card--organizers .people-thumb-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .people-preview-card--speakers .people-thumb-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .people-thumb {
+        width: 100%;
+    }
+
+    .people-thumb-photo {
+        width: 105px;
+        height: 105px;
+    }
+
+    .talk-speaker {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .talk-speaker .organizer-photo {
+        max-width: 120px;
+        margin: 0 auto;
+    }
+
+    .allocation-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .allocation-bar span {
+        text-align: center;
+        font-size: 0.78rem;
+    }
+
+    .section-intro {
+        padding: 0.8rem 0.9rem;
+    }
+
+    .resource-list {
+        flex-direction: column;
+    }
+
+    .resource-list a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: clamp(1.4rem, 8vw, 2rem);
+    }
+
+    .section h2 {
+        font-size: clamp(1.3rem, 6vw, 1.8rem);
+    }
+
+    .stat-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .people-thumb-photo {
+        width: 88px;
+        height: 88px;
+    }
+
+    .people-thumb-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem 0.6rem;
+    }
+
+    .people-preview-card--organizers .people-thumb-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .people-thumb h4 {
+        font-size: 0.85rem;
+    }
+
+    .people-thumb p {
+        font-size: 0.72rem;
+    }
+
+    .talk-title {
+        font-size: clamp(1.1rem, 5vw, 1.5rem);
+    }
+
+    .talk-speaker h3 {
+        font-size: 1.25rem;
+    }
+
+    .section {
+        padding: 2.8rem 0 0.3rem;
     }
 }
