@@ -541,7 +541,7 @@ img.people-thumb-photo {
     color: var(--muted);
     font-size: 0.78rem;
     line-height: 1.35;
-    max-width: 15ch;
+    max-width: 18ch;
 }
 
 .people-list {
