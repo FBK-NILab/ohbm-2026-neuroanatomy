@@ -598,6 +598,14 @@ img.people-thumb-photo {
     box-shadow: 0 4px 12px rgba(16, 22, 34, 0.08);
 }
 
+.people-jump-photo--ludovico {
+    display: block;
+    background:
+        url("img/Ludovico_Coletta.png") center center / 142% no-repeat,
+        linear-gradient(140deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.08)),
+        rgba(255, 255, 255, 0.85);
+}
+
 .people-jump-photo-placeholder {
     display: grid;
     place-items: center;
@@ -796,6 +804,12 @@ img.organizer-photo {
     margin-bottom: 0;
     font-size: 0.62rem;
     align-self: start;
+}
+
+.talk-speaker .organizer-photo--ludovico {
+    background:
+        url("img/Ludovico_Coletta.png") center center / 146% no-repeat,
+        linear-gradient(135deg, var(--accent), var(--accent-pop));
 }
 
 .talk-speaker h3 {
@@ -1077,6 +1091,18 @@ img.organizer-photo {
     width: 30%;
 }
 
+@media (min-width: 901px) {
+    .program-table th:first-child,
+    .program-table td:first-child {
+        width: 14%;
+    }
+
+    .program-table th:nth-child(2),
+    .program-table td:nth-child(2) {
+        width: 56%;
+    }
+}
+
 .program-table tbody tr:last-child td {
     border-bottom: none;
 }
@@ -1135,6 +1161,44 @@ img.organizer-photo {
     font-size: 0.9rem;
     font-weight: 700;
     box-shadow: 0 8px 16px rgba(79, 70, 229, 0.18);
+}
+
+img.speaker-avatar {
+    display: block;
+    object-fit: cover;
+    object-position: center 18%;
+}
+
+.speaker-avatar--ludovico {
+    background:
+        url("img/Ludovico_Coletta.png") center center / 146% no-repeat,
+        linear-gradient(135deg, var(--accent), var(--accent-pop));
+}
+
+.speaker-marker {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    flex: 0 0 2rem;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.speaker-marker--break {
+    color: var(--accent-dark);
+    background: rgba(79, 70, 229, 0.1);
+    border: 1px solid rgba(79, 70, 229, 0.18);
+}
+
+.speaker-marker--pause {
+    color: #9a3412;
+    background: rgba(251, 146, 60, 0.12);
+    border: 1px solid rgba(251, 146, 60, 0.2);
 }
 
 .resource-list {
