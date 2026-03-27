@@ -3,6 +3,7 @@ const navMenu = document.getElementById("nav-menu");
 const navbar = document.getElementById("top-nav");
 const navLinks = navMenu ? navMenu.querySelectorAll("a") : [];
 const revealElements = document.querySelectorAll(".section-reveal");
+const isPeoplePage = document.body.classList.contains("page-people");
 
 if (menuButton && navMenu) {
   menuButton.addEventListener("click", () => {
@@ -38,7 +39,15 @@ const updateNavbarState = () => {
 window.addEventListener("scroll", updateNavbarState);
 updateNavbarState();
 
-if ("IntersectionObserver" in window) {
+if (isPeoplePage) {
+  // The People page is dense and heavily anchor-linked, so disabling
+  // reveal-on-scroll avoids perceived "stalls" while scrolling.
+  document.documentElement.style.scrollBehavior = "auto";
+  revealElements.forEach((element) => {
+    element.classList.remove("reveal-pending");
+    element.classList.add("is-visible");
+  });
+} else if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries, currentObserver) => {
       entries.forEach((entry) => {
