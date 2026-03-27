@@ -523,7 +523,7 @@ main {
     text-transform: uppercase;
     letter-spacing: 0.04em;
     object-fit: cover;
-    object-position: center;
+    object-position: center 18%;
 }
 
 img.people-thumb-photo {
@@ -593,7 +593,7 @@ img.people-thumb-photo {
     height: 90px;
     border-radius: 999px;
     object-fit: cover;
-    object-position: center;
+    object-position: center 18%;
     border: 1px solid rgba(26, 39, 61, 0.12);
     box-shadow: 0 4px 12px rgba(16, 22, 34, 0.08);
 }
@@ -653,11 +653,22 @@ img.people-thumb-photo {
     text-transform: uppercase;
     margin-bottom: 0;
     object-fit: cover;
-    object-position: center;
+    object-position: center 18%;
+}
+
+img.organizer-photo {
+    display: block;
 }
 
 .people-card-photo {
     order: 1;
+}
+
+.people-card-photo--ludovico {
+    background:
+        url("img/Ludovico_Coletta.png") center center / 142% no-repeat,
+        linear-gradient(140deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.08)),
+        rgba(255, 255, 255, 0.75);
 }
 
 .people-card-meta {
@@ -781,8 +792,10 @@ img.people-thumb-photo {
 
 .talk-speaker .organizer-photo {
     aspect-ratio: 1 / 1;
+    border-radius: 999px;
     margin-bottom: 0;
     font-size: 0.62rem;
+    align-self: start;
 }
 
 .talk-speaker h3 {
@@ -1019,6 +1032,7 @@ img.people-thumb-photo {
     width: 100%;
     min-width: 680px;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 .program-table th,
@@ -1042,19 +1056,77 @@ img.people-thumb-photo {
     background: rgba(255, 255, 255, 0.4);
 }
 
+.program-table th:first-child,
+.program-table td:first-child {
+    width: 18%;
+    white-space: normal;
+}
+
+.program-table th:nth-child(2),
+.program-table td:nth-child(2) {
+    width: 52%;
+}
+
+.program-table td:nth-child(2) {
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.program-table th:last-child,
+.program-table td:last-child {
+    width: 30%;
+}
+
 .program-table tbody tr:last-child td {
     border-bottom: none;
 }
 
-.speaker-cell {
+.program-time {
     display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.08rem;
+    font-weight: 700;
+    line-height: 1.12;
+}
+
+.program-time span {
+    display: block;
+}
+
+.program-time-range span + span {
+    position: relative;
+    padding-top: 0.32rem;
+}
+
+.program-time-range span + span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.45rem;
+    height: 1px;
+    background: rgba(26, 39, 61, 0.22);
+}
+
+.speaker-cell {
+    display: flex;
     align-items: center;
     gap: 0.7rem;
+    min-width: 0;
+}
+
+.speaker-cell span:last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .speaker-avatar {
     width: 2rem;
     height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    flex: 0 0 2rem;
     display: inline-grid;
     place-items: center;
     border-radius: 999px;
@@ -1126,6 +1198,21 @@ img.people-thumb-photo {
 
 .footer-block a {
     color: var(--accent-dark);
+}
+
+.footer-email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.14em;
+    font-weight: 600;
+}
+
+.footer-email-link:hover,
+.footer-email-link:focus-visible {
+    color: var(--accent);
 }
 
 .footer-meta {
