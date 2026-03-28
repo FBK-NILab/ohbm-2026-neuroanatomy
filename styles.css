@@ -598,14 +598,6 @@ img.people-thumb-photo {
     box-shadow: 0 4px 12px rgba(16, 22, 34, 0.08);
 }
 
-.people-jump-photo--ludovico {
-    display: block;
-    background:
-        url("img/Ludovico_Coletta.png") center center / 142% no-repeat,
-        linear-gradient(140deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.08)),
-        rgba(255, 255, 255, 0.85);
-}
-
 .people-jump-photo-placeholder {
     display: grid;
     place-items: center;
@@ -670,13 +662,6 @@ img.organizer-photo {
 
 .people-card-photo {
     order: 1;
-}
-
-.people-card-photo--ludovico {
-    background:
-        url("img/Ludovico_Coletta.png") center center / 142% no-repeat,
-        linear-gradient(140deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.08)),
-        rgba(255, 255, 255, 0.75);
 }
 
 .people-card-meta {
@@ -804,12 +789,6 @@ img.organizer-photo {
     margin-bottom: 0;
     font-size: 0.62rem;
     align-self: start;
-}
-
-.talk-speaker .organizer-photo--ludovico {
-    background:
-        url("img/Ludovico_Coletta.png") center center / 146% no-repeat,
-        linear-gradient(135deg, var(--accent), var(--accent-pop));
 }
 
 .talk-speaker h3 {
@@ -1167,12 +1146,6 @@ img.speaker-avatar {
     display: block;
     object-fit: cover;
     object-position: center 18%;
-}
-
-.speaker-avatar--ludovico {
-    background:
-        url("img/Ludovico_Coletta.png") center center / 146% no-repeat,
-        linear-gradient(135deg, var(--accent), var(--accent-pop));
 }
 
 .speaker-marker {
