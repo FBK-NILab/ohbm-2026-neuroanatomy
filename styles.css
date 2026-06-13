@@ -1207,6 +1207,217 @@ img.speaker-avatar {
     color: var(--accent);
 }
 
+.materials-layout {
+    padding-bottom: 3.5rem;
+}
+
+.materials-section {
+    padding-top: 2.6rem;
+}
+
+.materials-heading {
+    margin-bottom: 1rem;
+}
+
+.materials-heading h2 {
+    margin-bottom: 0.4rem;
+    font-family: "Fraunces", serif;
+    font-size: clamp(1.55rem, 3vw, 2rem);
+    line-height: 1.15;
+}
+
+.materials-heading > p:last-child {
+    max-width: 70ch;
+    color: var(--muted);
+}
+
+.materials-kicker,
+.download-card .download-card-label {
+    margin-bottom: 0.25rem;
+    color: var(--accent-dark);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.prerequisite-card {
+    padding: clamp(1.15rem, 3vw, 1.6rem);
+}
+
+.check-list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.check-list li {
+    position: relative;
+    padding-left: 2rem;
+    color: var(--text);
+}
+
+.check-list li::before {
+    content: "\2713";
+    position: absolute;
+    top: 0.05rem;
+    left: 0;
+    display: grid;
+    width: 1.35rem;
+    height: 1.35rem;
+    place-items: center;
+    border-radius: 999px;
+    background: rgba(79, 70, 229, 0.12);
+    color: var(--accent-dark);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.materials-note {
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--line);
+    font-weight: 600;
+}
+
+.download-grid,
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.download-card {
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    gap: 1.1rem;
+    overflow: hidden;
+    padding: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+.download-card-number {
+    position: absolute;
+    top: 0.65rem;
+    right: 1rem;
+    color: rgba(79, 70, 229, 0.1);
+    font-family: "Fraunces", serif;
+    font-size: 4.2rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.download-card h3 {
+    position: relative;
+    max-width: 85%;
+    font-family: "Fraunces", serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.download-details {
+    flex: 1;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+}
+
+.download-details h4 {
+    margin-bottom: 0.55rem;
+    font-size: 0.92rem;
+}
+
+.download-details p + p {
+    margin-top: 0.75rem;
+}
+
+.platform-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 0.85rem;
+    list-style: none;
+}
+
+.platform-list li,
+.download-size {
+    width: fit-content;
+    border: 1px solid rgba(79, 70, 229, 0.18);
+    border-radius: 999px;
+    background: rgba(79, 70, 229, 0.07);
+    padding: 0.3rem 0.65rem;
+    color: var(--accent-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.platform-list li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.platform-icon {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.platform-list li:nth-child(2) .platform-icon {
+    fill: currentColor;
+    stroke: none;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.support-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 1.35rem;
+}
+
+.support-card h3 {
+    font-family: "Fraunces", serif;
+    font-size: 1.3rem;
+}
+
+.support-card p {
+    flex: 1;
+}
+
+.support-button-icon {
+    width: 1.05rem;
+    height: 1.05rem;
+    flex: 0 0 1.05rem;
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.materials-closing {
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--muted);
+    font-style: italic;
+}
+
 .site-footer {
     width: 100%;
     margin: 0;
@@ -1549,6 +1760,16 @@ img.speaker-avatar {
 
     .section-intro {
         padding: 0.8rem 0.9rem;
+    }
+
+    .download-grid,
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .download-button,
+    .support-card .secondary-button {
+        width: 100%;
     }
 
     .resource-list {

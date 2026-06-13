@@ -27,16 +27,121 @@
             <button class="menu-button" id="menu-button" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
         </header>
 
-        <main>
+        <main class="materials-layout">
             <section class="section section-reveal">
                 <h2 class="title-with-icon"><span class="title-icon" aria-hidden="true">&#128218;</span>Materials and Instructions</h2>
                 <p class="section-intro">
-                    Morning lectures will be followed in the afternoon by dedicated hands-on sessions. The hands-on component is specifically designed to provide practical training in the virtual dissection of human brain connectivity using tractography. Participants will have the opportunity to explore and manipulate white-matter pathways in an interactive environment, reinforcing their understanding through guided practice.
-                    <br /><br />
-                    To support these activities, the organization will provide access to a dedicated tool for tractography manipulation, along with a curated repertoire of annotated datasets. These resources will enable participants to work with high-quality data and follow structured exercises throughout the session.
-                    <br /><br />
-                    Further practical details, including technical requirements and step-by-step instructions for participation, will be made available on this webpage in the weeks leading up to the event.
+                    The hands-on session actively engages participants in exploring human brain anatomy through advanced neuroimaging data. In addition to visualizing the organization of human brain connectivity, participants will interactively identify and recognize principal anatomical structures using multimodal datasets and dedicated visualization tools.
                 </p>
+            </section>
+
+            <section class="materials-section section-reveal" aria-labelledby="prerequisites-title">
+                <div class="materials-heading">
+                    <p class="materials-kicker">Before the event</p>
+                    <h2 id="prerequisites-title">Prerequisites</h2>
+                </div>
+                <div class="card prerequisite-card">
+                    <p>To participate in the hands-on session, attendees are required to:</p>
+                    <ul class="check-list">
+                        <li>Bring their own laptop computer.</li>
+                        <li>Download and install all required materials before the event.</li>
+                        <li>Verify in advance that the software is correctly installed and functioning on their system.</li>
+                    </ul>
+                    <p class="materials-note">Preparing the materials ahead of time will ensure a smooth and productive learning experience during the session.</p>
+                </div>
+            </section>
+
+            <section class="materials-section section-reveal" aria-labelledby="materials-title">
+                <div class="materials-heading">
+                    <p class="materials-kicker">Downloads</p>
+                    <h2 id="materials-title">Hands-on Materials</h2>
+                    <p>The educational materials are organized into two complementary components.</p>
+                </div>
+
+                <div class="download-grid">
+                    <article class="card download-card">
+                        <span class="download-card-number" aria-hidden="true">01</span>
+                        <div>
+                            <p class="download-card-label">Interactive Tool</p>
+                            <h3>Tractome Software</h3>
+                            <p>A software application for the interactive exploration and virtual dissection of brain connectivity structures.</p>
+                        </div>
+                        <div class="download-details">
+                            <h4>Available platforms</h4>
+                            <ul class="platform-list">
+                                <li>
+                                    <svg class="platform-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <rect x="4" y="5" width="16" height="11" rx="1.5"></rect>
+                                        <path d="M2.5 19h19M9 19l.75-3h4.5L15 19"></path>
+                                    </svg>
+                                    macOS (Apple Silicon)
+                                </li>
+                                <li>
+                                    <svg class="platform-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M3 5.5 10.5 4v7H3V5.5ZM12.5 3.6 21 2v9h-8.5V3.6ZM3 13h7.5v7L3 18.5V13ZM12.5 13H21v9l-8.5-1.6V13Z"></path>
+                                    </svg>
+                                    Microsoft Windows
+                                </li>
+                                <li>
+                                    <svg class="platform-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                                        <path d="m7 9 3 3-3 3M12.5 15H17"></path>
+                                    </svg>
+                                    Linux
+                                </li>
+                            </ul>
+                            <p>Participants are strongly encouraged to install the software before the course and verify that it runs correctly on their laptop.</p>
+                        </div>
+                        <a class="primary-button download-button" href="https://github.com/FBK-NILab/tractome/releases/tag/v2.0.0a1" target="_blank" rel="noopener noreferrer">Download software release</a>
+                    </article>
+
+                    <article class="card download-card">
+                        <span class="download-card-number" aria-hidden="true">02</span>
+                        <div>
+                            <p class="download-card-label">Curated Data Repository</p>
+                            <h3>Educational Datasets</h3>
+                            <p>A collection of multimodal neuroimaging datasets specifically selected for educational purposes.</p>
+                        </div>
+                        <div class="download-details">
+                            <h4>Download information</h4>
+                            <p class="download-size">Approximately 2.5 GB</p>
+                            <p>Because of the download size, participants are encouraged to complete the download before the event.</p>
+                        </div>
+                        <a class="primary-button download-button" href="https://zenodo.org/records/20672939" target="_blank" rel="noopener noreferrer">Download dataset release</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="materials-section section-reveal" aria-labelledby="support-title">
+                <div class="materials-heading">
+                    <p class="materials-kicker">Help and troubleshooting</p>
+                    <h2 id="support-title">Online Support</h2>
+                </div>
+                <div class="support-grid">
+                    <article class="card support-card">
+                        <h3>During the Course</h3>
+                        <p>An online support service will be available throughout the educational course. Participants experiencing technical difficulties may join the dedicated Zoom support room.</p>
+                        <a class="secondary-button" href="https://iu.zoom.us/j/83294112375" target="_blank" rel="noopener noreferrer">
+                            <svg class="support-button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="6" width="12" height="12" rx="2"></rect>
+                                <path d="m15 10 6-3v10l-6-3"></path>
+                            </svg>
+                            Join Zoom support room
+                        </a>
+                    </article>
+                    <article class="card support-card">
+                        <h3>Before the Event</h3>
+                        <p>If you require assistance before the event, please contact the support team by email.</p>
+                        <a class="secondary-button" href="mailto:help@tractome.org">
+                            <svg class="support-button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                <path d="m4 7 8 6 8-6"></path>
+                            </svg>
+                            Email help@tractome.org
+                        </a>
+                    </article>
+                </div>
+                <p class="materials-closing">We look forward to welcoming you to this interactive learning experience and exploring the fascinating architecture of human brain connectivity together.</p>
             </section>
         </main>
 
