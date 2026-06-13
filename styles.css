@@ -1280,6 +1280,30 @@ img.speaker-avatar {
     font-weight: 600;
 }
 
+.info-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: fit-content;
+    border: 1px solid rgba(79, 70, 229, 0.18);
+    border-radius: 999px;
+    background: rgba(79, 70, 229, 0.07);
+    padding: 0.3rem 0.75rem;
+    color: var(--accent-dark);
+    font-size: 0.8rem;
+}
+
+.info-pill-icon {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 1rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .download-grid,
 .support-grid {
     display: grid;
